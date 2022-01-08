@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "gfhrUo3NNXtXD444WTEfUoWqrlpWYCNJo6v0N4gwUuo7Vqvg5MV3XB0g7+fx2PBKVnRHop7u5z8hVr9Uhq8EZQ==",
+  "dgSpecHash": "qGh0FsD5sWhJPf8LlQVIECkPRDtZ0dIYVULDtqlPSTRVrUauXixbGYYPqxF93xVflJ+y7pCIlfAu73eL3FxyGQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\wuill\\OneDrive\\Documents\\GitHub\\REF-WEB\\QuotePDFService\\QuotePDFService.csproj",
+  "projectFilePath": "C:\\Users\\wuill\\OneDrive\\Documents\\GitHub\\quote-pdf-service-refwebsoftware\\QuotePDFService.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\wuill\\.nuget\\packages\\automapper\\10.1.1\\automapper.10.1.1.nupkg.sha512",
     "C:\\Users\\wuill\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\8.1.1\\automapper.extensions.microsoft.dependencyinjection.8.1.1.nupkg.sha512",

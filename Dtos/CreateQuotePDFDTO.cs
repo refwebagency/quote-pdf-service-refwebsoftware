@@ -4,8 +4,7 @@ namespace QuotePDFService.Dtos
 {
     public class CreateQuotePDFDTO
     {
-        // public Client 
-
-        // public Project
+        [Required]
+        public int ClientId { get; set; }
     }
 }

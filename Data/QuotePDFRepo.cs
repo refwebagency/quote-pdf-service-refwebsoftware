@@ -46,6 +46,11 @@ namespace QuotePDFService.Data
             return _context.QuotePDF.FirstOrDefault(QuotePDF => QuotePDF.Id == id);
         }
 
+        public IEnumerable<QuotePDF> GetQuotePDFByClientId(int id)
+        {
+            return _context.QuotePDF.Where(QuotePDF => QuotePDF.ClientId == id).ToList();
+        }
+
         public bool SaveChanges()
         {
             return (_context.SaveChanges() >=0 );
