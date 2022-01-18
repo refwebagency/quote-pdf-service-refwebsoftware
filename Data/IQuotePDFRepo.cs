@@ -13,6 +13,8 @@ namespace QuotePDFService.Data
 
         QuotePDF GetQuotePDFById(int id);
 
+        IEnumerable<QuotePDF> GetQuotePDFByProjectId(int id);
+
         IEnumerable<QuotePDF> GetQuotePDFByClientId(int id);
 
         void UpdateQuotePDFById(int id);

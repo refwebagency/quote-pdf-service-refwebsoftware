@@ -42,6 +42,19 @@ namespace QuotePDFService.Controllers
             return Ok(_mapper.Map<ReadQuotePDFDTO>(quotePDFItem));
         }
 
+        [HttpGet("project/{id}", Name = "GetQuotePDFByProjectId")]
+        public ActionResult<ReadQuotePDFDTO> GetQuotePDFByProjectId(int id)
+        {
+            var projectQuotePDFItem = _repository.GetQuotePDFByProjectId(id);
+
+            if (projectQuotePDFItem == null)
+            {
+                return NotFound();
+            }
+
+            return Ok(_mapper.Map<IEnumerable<ReadQuotePDFDTO>>(projectQuotePDFItem));
+        }
+
         [HttpGet("client/{id}", Name = "GetQuotePDFByClientId")]
         public ActionResult<IEnumerable<ReadQuotePDFDTO>> GetQuotePDFByClientId(int id)
         {

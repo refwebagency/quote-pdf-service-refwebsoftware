@@ -7,5 +7,7 @@ namespace QuotePDFService.Dtos
         public int Id { get; set; }
 
         public int ClientId { get; set; }
+
+        public int ProjectId { get; set; }
     }
 }

@@ -10,5 +10,8 @@ namespace QuotePDFService.Models
 
         [Required]
         public int ClientId { get; set; }
+
+        [Required]
+        public int ProjectId { get; set; }
     }
 }
