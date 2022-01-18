@@ -4,6 +4,9 @@ using Microsoft.AspNetCore.Mvc;
 using QuotePDFService.Data;
 using QuotePDFService.Dtos;
 using QuotePDFService.Models;
+using IronPdf;
+using System.IO;
+using System.Diagnostics;
 
 namespace QuotePDFService.Controllers
 {
@@ -27,6 +30,19 @@ namespace QuotePDFService.Controllers
             var quotePDFItems = _repository.GetAllQuotePDF();
 
             return Ok(_mapper.Map<IEnumerable<ReadQuotePDFDTO>>(quotePDFItems));
+        }
+
+        [HttpGet("accepte", Name = "AccepteQuotePDF")]
+        public ActionResult AccepteQuotePDF()
+        {
+           
+            var htmltopdf = new HtmlToPdf();
+            var pdfDoc = htmltopdf.RenderHtmlFileAsPdf("Template/quote.html");
+            pdfDoc.SaveAs("Template/quote.pdf");
+            string physicalPath = "Template/quote.pdf";
+            byte[] pdfBytes = System.IO.File.ReadAllBytes(physicalPath);
+            MemoryStream ms = new MemoryStream(pdfBytes);
+            return new FileStreamResult(ms, "application/pdf");
         }
 
         [HttpGet("{id}", Name = "GetQuotePDFById")]

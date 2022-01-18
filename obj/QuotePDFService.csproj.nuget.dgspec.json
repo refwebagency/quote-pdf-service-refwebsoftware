@@ -42,6 +42,10 @@
               "target": "Package",
               "version": "[8.1.1, )"
             },
+            "IronPdf": {
+              "target": "Package",
+              "version": "[2022.1.4599, )"
+            },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
               "version": "[5.0.0, )"
