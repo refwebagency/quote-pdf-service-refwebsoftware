@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
 namespace QuotePDFService.Models
@@ -9,6 +10,9 @@ namespace QuotePDFService.Models
         public int Id { get; set; }
 
         [Required]
-        public int ClientId { get; set; }
+        public Project Project { get; set; }
+
+        [Required]
+        public ICollection<TodoTemplate> TodoTemplates { get; set; } = new List<TodoTemplate>();
     }
 }

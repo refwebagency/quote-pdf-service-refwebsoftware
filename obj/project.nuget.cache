@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "S2t1LF1+ki+VQZcQIriYSe+5phbnAh/bicY8oTGvPBLXi1k5K9zm8gwwcX1oiNtGnt1VJYuOGWmyTu1ZguMiWQ==",
+  "dgSpecHash": "Im9X3k0xnSBVp+VdFJnO4QsexhC9OCTiWZVHhe2PfE3GTW7h6GH5GCferfauAPEVCWSueIhrrcwLrWLr2/rYmg==",
   "success": true,
   "projectFilePath": "C:\\Users\\wuill\\OneDrive\\Documents\\GitHub\\quote-pdf-service-refwebsoftware\\QuotePDFService.csproj",
   "expectedPackageFiles": [
@@ -30,6 +30,7 @@
     "C:\\Users\\wuill\\.nuget\\packages\\microsoft.netcore.platforms\\5.0.0\\microsoft.netcore.platforms.5.0.0.nupkg.sha512",
     "C:\\Users\\wuill\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",
     "C:\\Users\\wuill\\.nuget\\packages\\microsoft.win32.systemevents\\5.0.0\\microsoft.win32.systemevents.5.0.0.nupkg.sha512",
+    "C:\\Users\\wuill\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512",
     "C:\\Users\\wuill\\.nuget\\packages\\swashbuckle.aspnetcore\\5.6.3\\swashbuckle.aspnetcore.5.6.3.nupkg.sha512",
     "C:\\Users\\wuill\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\5.6.3\\swashbuckle.aspnetcore.swagger.5.6.3.nupkg.sha512",
     "C:\\Users\\wuill\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\5.6.3\\swashbuckle.aspnetcore.swaggergen.5.6.3.nupkg.sha512",

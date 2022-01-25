@@ -7,6 +7,12 @@ using QuotePDFService.Models;
 using IronPdf;
 using System.IO;
 using System.Diagnostics;
+using System.Net.Http;
+using Microsoft.Extensions.Configuration;
+using System.Threading.Tasks;
+using Newtonsoft.Json;
+using System;
+using Microsoft.EntityFrameworkCore;
 
 namespace QuotePDFService.Controllers
 {
@@ -17,11 +23,15 @@ namespace QuotePDFService.Controllers
     {
         private readonly IQuotePDFRepo _repository;
         private readonly IMapper _mapper;
+        private readonly HttpClient _HttpClient;
+        private readonly IConfiguration _configuration;
 
-        public QuotePDFController(IMapper mapper, IQuotePDFRepo repository)
+        public QuotePDFController(IMapper mapper, IQuotePDFRepo repository, HttpClient HttpClient, IConfiguration configuration)
         {
             _repository = repository;
             _mapper = mapper;
+            _HttpClient = HttpClient;
+            _configuration = configuration;
         }
 
         [HttpGet]
@@ -71,14 +81,48 @@ namespace QuotePDFService.Controllers
             return Ok(_mapper.Map<IEnumerable<ReadQuotePDFDTO>>(quotePDFItem));
         }
 
+        [HttpGet("todo/{id}", Name = "GetTodoTemplateById")]
+        public ActionResult<TodoTemplate> GetTodoTemplateById(int id)
+        {
+            var quotePDFItem = _repository.GetTodoTemplateById(id);
+
+            if (quotePDFItem == null)
+            {
+                return NotFound();
+            }
+
+            return Ok(_mapper.Map<TodoTemplate>(quotePDFItem));
+        }
+
         [HttpPost]
-        public ActionResult<CreateQuotePDFDTO> CreateQuotePDF(CreateQuotePDFDTO quotePDFDTO)
+        public async Task<ActionResult<CreateQuotePDFDTO>> CreateQuotePDF(CreateQuotePDFDTO quotePDFDTO)
         {
             var quotePDFModel = _mapper.Map<QuotePDF>(quotePDFDTO);
+            var items = new List<TodoTemplate>();
+            
+            foreach (var TodoItem in quotePDFModel.TodoTemplates)
+            {
+                var TodoTemplateDTO = _mapper.Map<TodoTemplate>(TodoItem);
+
+                var getTodoTemplate = await _HttpClient.GetAsync($"{_configuration["TodoTemplateService"]}" + TodoItem.Id);
+
+                var deserializedTodoTemplate = JsonConvert.DeserializeObject<TodoTemplateCreateDto>(
+                    await getTodoTemplate.Content.ReadAsStringAsync());
+
+                var todoTemplateModel = _mapper.Map<TodoTemplate>(deserializedTodoTemplate);
+
+                var todoTemplate = _repository.GetTodoTemplateById(TodoItem.Id);
+                
+                if (todoTemplate != null) TodoTemplateDTO = todoTemplate;else TodoTemplateDTO = todoTemplateModel;
+            
+                items.Add(TodoTemplateDTO);
+            }
+            
+            quotePDFModel.TodoTemplates = items;
 
             _repository.CreateQuotePDF(quotePDFModel);
             _repository.SaveChanges();
-
+            
             var readQuotePDF = _mapper.Map<ReadQuotePDFDTO>(quotePDFModel);
 
             return CreatedAtRoute(nameof(GetQuotePDFById), new {id = readQuotePDF.Id }, readQuotePDF);

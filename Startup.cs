@@ -12,6 +12,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
+using QuotePDFService.Controllers;
 using QuotePDFService.Data;
 
 namespace QuotePDFService
@@ -32,6 +33,7 @@ namespace QuotePDFService
             services.AddDbContext<AppDbContext>(options => options.UseInMemoryDatabase("QuotePDFService"));
             services.AddScoped<IQuotePDFRepo, QuotePDFRepo>();
             services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
+            services.AddHttpClient<QuotePDFController>();
             services.AddControllers();
             services.AddSwaggerGen(c =>
             {

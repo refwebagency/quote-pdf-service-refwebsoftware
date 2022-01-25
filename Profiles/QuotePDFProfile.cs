@@ -11,6 +11,8 @@ namespace QuotePDFService.Profiles
             CreateMap<QuotePDF, ReadQuotePDFDTO>();
             CreateMap<CreateQuotePDFDTO, QuotePDF>();
             CreateMap<UpdateQuotePDFDTO, QuotePDF>();
+
+            CreateMap<TodoTemplateCreateDto, TodoTemplate>();
         }
     }
 }
