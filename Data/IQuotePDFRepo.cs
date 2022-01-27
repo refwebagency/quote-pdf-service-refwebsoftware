@@ -20,5 +20,6 @@ namespace QuotePDFService.Data
         void DeleteQuotePDFById(int id);
 
         TodoTemplate GetTodoTemplateById(int id);
+
     }
 }

@@ -5,6 +5,9 @@ namespace QuotePDFService.Dtos
     public class TodoTemplateCreateDto
     {
         [Required]
+        public int Id { get; set; }
+
+        [Required]
         public string Name { get; set; }
 
         [Required]

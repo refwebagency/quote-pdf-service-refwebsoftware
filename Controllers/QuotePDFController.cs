@@ -98,26 +98,51 @@ namespace QuotePDFService.Controllers
         public async Task<ActionResult<CreateQuotePDFDTO>> CreateQuotePDF(CreateQuotePDFDTO quotePDFDTO)
         {
             var quotePDFModel = _mapper.Map<QuotePDF>(quotePDFDTO);
+            // nouvelle liste de TodoTemplate
             var items = new List<TodoTemplate>();
             
+            // pour chaque liste de TodoTemplate dans un quotePDF
             foreach (var TodoItem in quotePDFModel.TodoTemplates)
             {
+                //nouvel objet TodoTemplate
+                var newTodo = new TodoTemplate();
                 var TodoTemplateDTO = _mapper.Map<TodoTemplate>(TodoItem);
 
+                // requete GET en async d'un todoTemplate par son ID dans toDoTemplateService
                 var getTodoTemplate = await _HttpClient.GetAsync($"{_configuration["TodoTemplateService"]}" + TodoItem.Id);
 
+                // deserialization de l'objet reçu 
                 var deserializedTodoTemplate = JsonConvert.DeserializeObject<TodoTemplateCreateDto>(
                     await getTodoTemplate.Content.ReadAsStringAsync());
 
                 var todoTemplateModel = _mapper.Map<TodoTemplate>(deserializedTodoTemplate);
-
+                
+                // recupere l'objet stocké avec l'id de l'objet reçu
                 var todoTemplate = _repository.GetTodoTemplateById(TodoItem.Id);
                 
-                if (todoTemplate != null) TodoTemplateDTO = todoTemplate;else TodoTemplateDTO = todoTemplateModel;
-            
-                items.Add(TodoTemplateDTO);
-            }
-            
+                // Si aucun objet n'est retoruné 
+                if (todoTemplate != null)
+                {   
+                        // Set des valeurs 
+                        newTodo.ExternalToDoId = todoTemplateModel.Id;
+                        newTodo.Name = todoTemplateModel.Name;
+                        newTodo.Experience = todoTemplateModel.Experience;
+                        newTodo.Description = todoTemplateModel.Description;
+                        newTodo.Time = todoTemplateModel.Time;
+                        newTodo.SpecializationId = todoTemplateModel.SpecializationId;
+                        newTodo.ProjectTypeId = todoTemplateModel.ProjectTypeId;
+                    
+                } 
+                else
+                { 
+                        newTodo = todoTemplateModel;
+                        newTodo.ExternalToDoId = todoTemplateModel.Id;
+                }
+                // Rajout de l'objet nouvellement crée à la liste
+                items.Add(newTodo);
+                
+            }        
+            // set de la liste à quotePDF
             quotePDFModel.TodoTemplates = items;
 
             _repository.CreateQuotePDF(quotePDFModel);

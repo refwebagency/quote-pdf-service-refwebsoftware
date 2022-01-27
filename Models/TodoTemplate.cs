@@ -8,6 +8,8 @@ namespace QuotePDFService.Models
         [Required]
         public int Id { get; set; }
 
+        public int ExternalToDoId { get; set; }
+
         [Required]
         public string Name { get; set; }
 

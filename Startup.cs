@@ -48,7 +48,10 @@ namespace QuotePDFService
             {
                 app.UseDeveloperExceptionPage();
                 app.UseSwagger();
-                app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "QuotePDFService v1"));
+                app.UseSwaggerUI(c => { 
+                    c.SwaggerEndpoint("/swagger/v1/swagger.json", "QuotePDFService v1");
+                    c.InjectStylesheet("/swagger-ui/SwaggerDark.css");
+                });
             }
 
             app.UseHttpsRedirection();
@@ -56,6 +59,8 @@ namespace QuotePDFService
             app.UseRouting();
 
             app.UseAuthorization();
+
+            app.UseStaticFiles();
 
             app.UseEndpoints(endpoints =>
             {
