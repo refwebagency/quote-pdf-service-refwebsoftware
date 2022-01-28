@@ -12,6 +12,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
+using QuotePDFService.AsyncDataClient;
 using QuotePDFService.Controllers;
 using QuotePDFService.Data;
 
@@ -34,6 +35,7 @@ namespace QuotePDFService
             services.AddScoped<IQuotePDFRepo, QuotePDFRepo>();
             services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
             services.AddHttpClient<QuotePDFController>();
+            services.AddSingleton<IMessageBusClient, MessageBusClient>();
             services.AddControllers();
             services.AddSwaggerGen(c =>
             {

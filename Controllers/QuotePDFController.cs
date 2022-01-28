@@ -13,6 +13,8 @@ using System.Threading.Tasks;
 using Newtonsoft.Json;
 using System;
 using Microsoft.EntityFrameworkCore;
+using QuotePDFService.AsyncDataClient;
+using System.Text;
 
 namespace QuotePDFService.Controllers
 {
@@ -25,13 +27,15 @@ namespace QuotePDFService.Controllers
         private readonly IMapper _mapper;
         private readonly HttpClient _HttpClient;
         private readonly IConfiguration _configuration;
+        private readonly IMessageBusClient _messageBusClient;
 
-        public QuotePDFController(IMapper mapper, IQuotePDFRepo repository, HttpClient HttpClient, IConfiguration configuration)
+        public QuotePDFController(IMapper mapper, IQuotePDFRepo repository, HttpClient HttpClient, IConfiguration configuration, IMessageBusClient messageBusClient)
         {
             _repository = repository;
             _mapper = mapper;
             _HttpClient = HttpClient;
             _configuration = configuration;
+            _messageBusClient = messageBusClient;
         }
 
         [HttpGet]
@@ -152,6 +156,58 @@ namespace QuotePDFService.Controllers
 
             return CreatedAtRoute(nameof(GetQuotePDFById), new {id = readQuotePDF.Id }, readQuotePDF);
         }
+
+        /** Quand le client accepte le devis, je veux que l'objet project 
+            soit envoyé à projectService en rabbitMQ, afin d'obtenir en réponse son Id,
+            pour que je puisse le SET dans l'attribut projectId des objets Todo de la 
+            liste todoTemplate*/
+        [HttpPost("start project/{id}", Name = "StartNewProjectWithHisTasks")]
+        public async Task<ActionResult<ReadQuotePDFDTO>> StartNewProjectWithHisTasks(int id)
+        {
+            var quotePDFItem = _repository.GetQuotePDFById(id);
+
+            // seialization du projet
+            var httpProjectContent = new StringContent( System.Text.Json.JsonSerializer.Serialize(quotePDFItem.Project),
+                        Encoding.UTF8,
+                        "application/json"
+                        );
+
+            foreach(var toDo in quotePDFItem.TodoTemplates)
+            {
+                toDo.ProjectId = quotePDFItem.Project.Id;
+
+                var httpTodoContent = new StringContent( System.Text.Json.JsonSerializer.Serialize(toDo),
+                        Encoding.UTF8,
+                        "application/json"
+                        );
+                Console.WriteLine("test");
+
+                // post en async de ToDo vers todoService
+                await _HttpClient.PostAsync($"{_configuration["TodoService"]}", httpTodoContent);
+                
+            }
+            
+            // post en async de project vers projectService
+            await _HttpClient.PostAsync($"{_configuration["ProjectService"]}", httpProjectContent);
+
+            // partie RabbitMQ
+            try
+            {
+                var createProjectAsyncDTO = _mapper.Map<PublishedProjectAsyncDTO>(quotePDFItem.Project);
+                createProjectAsyncDTO.Event = "Project_Published";
+                Console.WriteLine("Error :" + quotePDFItem.Project.Name);
+                Console.WriteLine("Error :" + quotePDFItem.Project.ProjectTypeId);
+
+                _messageBusClient.SendAnyProject(createProjectAsyncDTO);
+            }
+            catch (System.Exception ex)
+            {
+                Console.WriteLine("Error :" + ex.Message);
+            }
+            
+            return Ok();
+        }
+        
 
         [HttpPut("{id}", Name = "UpdateQuotePDFById")]
         public ActionResult<UpdateQuotePDFDTO> UpdateQuotePDFById(int id, UpdateQuotePDFDTO quotePDFDTO)
