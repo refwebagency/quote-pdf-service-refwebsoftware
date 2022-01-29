@@ -46,7 +46,7 @@ namespace QuotePDFService.Controllers
             return Ok(_mapper.Map<IEnumerable<ReadQuotePDFDTO>>(quotePDFItems));
         }
 
-        [HttpGet("accepte", Name = "AccepteQuotePDF")]
+        [HttpGet("Devis", Name = "AccepteQuotePDF")]
         public ActionResult AccepteQuotePDF()
         {
            
@@ -134,6 +134,7 @@ namespace QuotePDFService.Controllers
                         newTodo.Description = todoTemplateModel.Description;
                         newTodo.Time = todoTemplateModel.Time;
                         newTodo.SpecializationId = todoTemplateModel.SpecializationId;
+                        newTodo.ProjectId = quotePDFModel.Project.Id;
                         newTodo.ProjectTypeId = todoTemplateModel.ProjectTypeId;
                     
                 } 

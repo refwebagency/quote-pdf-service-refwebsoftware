@@ -409,3 +409,5 @@ C:\Users\Maxime\Desktop\RefWebLogiciel - Services\quote-pdf-service-refwebsoftwa
 C:\Users\Maxime\Desktop\RefWebLogiciel - Services\quote-pdf-service-refwebsoftware\obj\Debug\net5.0\QuotePDFService.genruntimeconfig.cache
 C:\Users\Maxime\Desktop\RefWebLogiciel - Services\quote-pdf-service-refwebsoftware\bin\Debug\net5.0\RabbitMQ.Client.dll
 C:\Users\Maxime\Desktop\RefWebLogiciel - Services\quote-pdf-service-refwebsoftware\bin\Debug\net5.0\appsettings.Production.json
+C:\Users\wuill\OneDrive\Documents\GitHub\quote-pdf-service-refwebsoftware\bin\Debug\net5.0\appsettings.Production.json
+C:\Users\wuill\OneDrive\Documents\GitHub\quote-pdf-service-refwebsoftware\bin\Debug\net5.0\RabbitMQ.Client.dll
