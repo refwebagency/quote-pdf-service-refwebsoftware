@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\wuill\\OneDrive\\Documents\\GitHub\\REF-WEB\\QuotePDFService\\QuotePDFService.csproj": {}
+    "C:\\Users\\wuill\\OneDrive\\Documents\\GitHub\\quote-pdf-service-refwebsoftware\\QuotePDFService.csproj": {}
   },
   "projects": {
-    "C:\\Users\\wuill\\OneDrive\\Documents\\GitHub\\REF-WEB\\QuotePDFService\\QuotePDFService.csproj": {
+    "C:\\Users\\wuill\\OneDrive\\Documents\\GitHub\\quote-pdf-service-refwebsoftware\\QuotePDFService.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\wuill\\OneDrive\\Documents\\GitHub\\REF-WEB\\QuotePDFService\\QuotePDFService.csproj",
+        "projectUniqueName": "C:\\Users\\wuill\\OneDrive\\Documents\\GitHub\\quote-pdf-service-refwebsoftware\\QuotePDFService.csproj",
         "projectName": "QuotePDFService",
-        "projectPath": "C:\\Users\\wuill\\OneDrive\\Documents\\GitHub\\REF-WEB\\QuotePDFService\\QuotePDFService.csproj",
+        "projectPath": "C:\\Users\\wuill\\OneDrive\\Documents\\GitHub\\quote-pdf-service-refwebsoftware\\QuotePDFService.csproj",
         "packagesPath": "C:\\Users\\wuill\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\wuill\\OneDrive\\Documents\\GitHub\\REF-WEB\\QuotePDFService\\obj\\",
+        "outputPath": "C:\\Users\\wuill\\OneDrive\\Documents\\GitHub\\quote-pdf-service-refwebsoftware\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\wuill\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -42,6 +42,10 @@
               "target": "Package",
               "version": "[8.1.1, )"
             },
+            "IronPdf": {
+              "target": "Package",
+              "version": "[2022.1.4599, )"
+            },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
               "version": "[5.0.0, )"
@@ -55,6 +59,14 @@
             "Microsoft.EntityFrameworkCore.InMemory": {
               "target": "Package",
               "version": "[5.0.0, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.1, )"
+            },
+            "RabbitMQ.Client": {
+              "target": "Package",
+              "version": "[6.2.2, )"
             },
             "Swashbuckle.AspNetCore": {
               "target": "Package",

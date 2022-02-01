@@ -13,8 +13,13 @@ namespace QuotePDFService.Data
 
         QuotePDF GetQuotePDFById(int id);
 
+        IEnumerable<Project> GetQuotePDFByClientId(int id);
+
         void UpdateQuotePDFById(int id);
 
         void DeleteQuotePDFById(int id);
+
+        TodoTemplate GetTodoTemplateById(int id);
+
     }
 }

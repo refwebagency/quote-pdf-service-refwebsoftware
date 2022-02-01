@@ -11,6 +11,12 @@ namespace QuotePDFService.Profiles
             CreateMap<QuotePDF, ReadQuotePDFDTO>();
             CreateMap<CreateQuotePDFDTO, QuotePDF>();
             CreateMap<UpdateQuotePDFDTO, QuotePDF>();
+
+            CreateMap<TodoTemplateCreateDto, TodoTemplate>();
+
+            //RabbitMQ
+            CreateMap<Project, PublishedProjectAsyncDTO>();
+            CreateMap<PublishedProjectAsyncDTO, Project>();
         }
     }
 }

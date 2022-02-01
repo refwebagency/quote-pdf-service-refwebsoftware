@@ -38,12 +38,28 @@ namespace QuotePDFService.Data
 
         public IEnumerable<QuotePDF> GetAllQuotePDF()
         {
+            _context.Project.ToList();
+            _context.TodoTemplate.ToList();
             return _context.QuotePDF.ToList();
         }
 
         public QuotePDF GetQuotePDFById(int id)
         {
+            _context.Project.ToList();
+            _context.TodoTemplate.ToList();
             return _context.QuotePDF.FirstOrDefault(QuotePDF => QuotePDF.Id == id);
+        }
+
+        public TodoTemplate GetTodoTemplateById(int id)
+        {
+            return _context.TodoTemplate.FirstOrDefault(TodoTemplate => TodoTemplate.Id == id);
+        }
+
+        public IEnumerable<Project> GetQuotePDFByClientId(int id)
+        {
+            _context.Project.ToList();
+            _context.TodoTemplate.ToList();
+            return _context.Project.Where(Project => Project.ClientId == id).ToList();
         }
 
         public bool SaveChanges()
@@ -56,6 +72,18 @@ namespace QuotePDFService.Data
             var quotePDF = _context.QuotePDF.FirstOrDefault(QuotePDF => QuotePDF.Id == id);
 
             _context.Entry(quotePDF).State = EntityState.Modified;
+        }
+
+        public void CreateTodoTemplate(TodoTemplate todoTemplate)
+        {
+            if (todoTemplate == null)
+            {
+                throw new ArgumentNullException(nameof(todoTemplate));
+            }
+
+            _context.TodoTemplate.Add(todoTemplate);
+            _context.SaveChanges();
+
         }
     }
 }

@@ -12,6 +12,8 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
+using QuotePDFService.AsyncDataClient;
+using QuotePDFService.Controllers;
 using QuotePDFService.Data;
 
 namespace QuotePDFService
@@ -32,6 +34,8 @@ namespace QuotePDFService
             services.AddDbContext<AppDbContext>(options => options.UseInMemoryDatabase("QuotePDFService"));
             services.AddScoped<IQuotePDFRepo, QuotePDFRepo>();
             services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
+            services.AddHttpClient<QuotePDFController>();
+            services.AddSingleton<IMessageBusClient, MessageBusClient>();
             services.AddControllers();
             services.AddSwaggerGen(c =>
             {
@@ -46,7 +50,10 @@ namespace QuotePDFService
             {
                 app.UseDeveloperExceptionPage();
                 app.UseSwagger();
-                app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "QuotePDFService v1"));
+                app.UseSwaggerUI(c => { 
+                    c.SwaggerEndpoint("/swagger/v1/swagger.json", "QuotePDFService v1");
+                    c.InjectStylesheet("/swagger-ui/SwaggerDark.css");
+                });
             }
 
             app.UseHttpsRedirection();
@@ -54,6 +61,8 @@ namespace QuotePDFService
             app.UseRouting();
 
             app.UseAuthorization();
+
+            app.UseStaticFiles();
 
             app.UseEndpoints(endpoints =>
             {

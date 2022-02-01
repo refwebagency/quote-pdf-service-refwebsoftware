@@ -38,6 +38,613 @@
           "lib/netstandard2.0/Humanizer.dll": {}
         }
       },
+      "IronPdf/2022.1.4599": {
+        "type": "package",
+        "dependencies": {
+          "IronPdf.Native.Chrome.Windows": "2022.1.4593",
+          "IronPdf.Slim": "2022.1.4599"
+        }
+      },
+      "IronPdf.Native.Chrome.Windows/2022.1.4593": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/_._": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/_._": {}
+        },
+        "runtimeTargets": {
+          "runtimes/win-x64/native/IronCefSubprocess.exe": {
+            "assetType": "native",
+            "rid": "win-x64"
+          },
+          "runtimes/win-x64/native/IronInterop.dll": {
+            "assetType": "native",
+            "rid": "win-x64"
+          },
+          "runtimes/win-x64/native/IronPdf.Native.Chrome.deployment.json": {
+            "assetType": "native",
+            "rid": "win-x64"
+          },
+          "runtimes/win-x64/native/chrome_100_percent.pak": {
+            "assetType": "native",
+            "rid": "win-x64"
+          },
+          "runtimes/win-x64/native/chrome_200_percent.pak": {
+            "assetType": "native",
+            "rid": "win-x64"
+          },
+          "runtimes/win-x64/native/chrome_elf.dll": {
+            "assetType": "native",
+            "rid": "win-x64"
+          },
+          "runtimes/win-x64/native/d3dcompiler_47.dll": {
+            "assetType": "native",
+            "rid": "win-x64"
+          },
+          "runtimes/win-x64/native/icudtl.dat": {
+            "assetType": "native",
+            "rid": "win-x64"
+          },
+          "runtimes/win-x64/native/libEGL.dll": {
+            "assetType": "native",
+            "rid": "win-x64"
+          },
+          "runtimes/win-x64/native/libGLESv2.dll": {
+            "assetType": "native",
+            "rid": "win-x64"
+          },
+          "runtimes/win-x64/native/libcef.dll": {
+            "assetType": "native",
+            "rid": "win-x64"
+          },
+          "runtimes/win-x64/native/locales/am.pak": {
+            "assetType": "native",
+            "rid": "win-x64"
+          },
+          "runtimes/win-x64/native/locales/ar.pak": {
+            "assetType": "native",
+            "rid": "win-x64"
+          },
+          "runtimes/win-x64/native/locales/bg.pak": {
+            "assetType": "native",
+            "rid": "win-x64"
+          },
+          "runtimes/win-x64/native/locales/bn.pak": {
+            "assetType": "native",
+            "rid": "win-x64"
+          },
+          "runtimes/win-x64/native/locales/ca.pak": {
+            "assetType": "native",
+            "rid": "win-x64"
+          },
+          "runtimes/win-x64/native/locales/cs.pak": {
+            "assetType": "native",
+            "rid": "win-x64"
+          },
+          "runtimes/win-x64/native/locales/da.pak": {
+            "assetType": "native",
+            "rid": "win-x64"
+          },
+          "runtimes/win-x64/native/locales/de.pak": {
+            "assetType": "native",
+            "rid": "win-x64"
+          },
+          "runtimes/win-x64/native/locales/el.pak": {
+            "assetType": "native",
+            "rid": "win-x64"
+          },
+          "runtimes/win-x64/native/locales/en-GB.pak": {
+            "assetType": "native",
+            "rid": "win-x64"
+          },
+          "runtimes/win-x64/native/locales/en-US.pak": {
+            "assetType": "native",
+            "rid": "win-x64"
+          },
+          "runtimes/win-x64/native/locales/es-419.pak": {
+            "assetType": "native",
+            "rid": "win-x64"
+          },
+          "runtimes/win-x64/native/locales/es.pak": {
+            "assetType": "native",
+            "rid": "win-x64"
+          },
+          "runtimes/win-x64/native/locales/et.pak": {
+            "assetType": "native",
+            "rid": "win-x64"
+          },
+          "runtimes/win-x64/native/locales/fa.pak": {
+            "assetType": "native",
+            "rid": "win-x64"
+          },
+          "runtimes/win-x64/native/locales/fi.pak": {
+            "assetType": "native",
+            "rid": "win-x64"
+          },
+          "runtimes/win-x64/native/locales/fil.pak": {
+            "assetType": "native",
+            "rid": "win-x64"
+          },
+          "runtimes/win-x64/native/locales/fr.pak": {
+            "assetType": "native",
+            "rid": "win-x64"
+          },
+          "runtimes/win-x64/native/locales/gu.pak": {
+            "assetType": "native",
+            "rid": "win-x64"
+          },
+          "runtimes/win-x64/native/locales/he.pak": {
+            "assetType": "native",
+            "rid": "win-x64"
+          },
+          "runtimes/win-x64/native/locales/hi.pak": {
+            "assetType": "native",
+            "rid": "win-x64"
+          },
+          "runtimes/win-x64/native/locales/hr.pak": {
+            "assetType": "native",
+            "rid": "win-x64"
+          },
+          "runtimes/win-x64/native/locales/hu.pak": {
+            "assetType": "native",
+            "rid": "win-x64"
+          },
+          "runtimes/win-x64/native/locales/id.pak": {
+            "assetType": "native",
+            "rid": "win-x64"
+          },
+          "runtimes/win-x64/native/locales/it.pak": {
+            "assetType": "native",
+            "rid": "win-x64"
+          },
+          "runtimes/win-x64/native/locales/ja.pak": {
+            "assetType": "native",
+            "rid": "win-x64"
+          },
+          "runtimes/win-x64/native/locales/kn.pak": {
+            "assetType": "native",
+            "rid": "win-x64"
+          },
+          "runtimes/win-x64/native/locales/ko.pak": {
+            "assetType": "native",
+            "rid": "win-x64"
+          },
+          "runtimes/win-x64/native/locales/lt.pak": {
+            "assetType": "native",
+            "rid": "win-x64"
+          },
+          "runtimes/win-x64/native/locales/lv.pak": {
+            "assetType": "native",
+            "rid": "win-x64"
+          },
+          "runtimes/win-x64/native/locales/ml.pak": {
+            "assetType": "native",
+            "rid": "win-x64"
+          },
+          "runtimes/win-x64/native/locales/mr.pak": {
+            "assetType": "native",
+            "rid": "win-x64"
+          },
+          "runtimes/win-x64/native/locales/ms.pak": {
+            "assetType": "native",
+            "rid": "win-x64"
+          },
+          "runtimes/win-x64/native/locales/nb.pak": {
+            "assetType": "native",
+            "rid": "win-x64"
+          },
+          "runtimes/win-x64/native/locales/nl.pak": {
+            "assetType": "native",
+            "rid": "win-x64"
+          },
+          "runtimes/win-x64/native/locales/pl.pak": {
+            "assetType": "native",
+            "rid": "win-x64"
+          },
+          "runtimes/win-x64/native/locales/pt-BR.pak": {
+            "assetType": "native",
+            "rid": "win-x64"
+          },
+          "runtimes/win-x64/native/locales/pt-PT.pak": {
+            "assetType": "native",
+            "rid": "win-x64"
+          },
+          "runtimes/win-x64/native/locales/ro.pak": {
+            "assetType": "native",
+            "rid": "win-x64"
+          },
+          "runtimes/win-x64/native/locales/ru.pak": {
+            "assetType": "native",
+            "rid": "win-x64"
+          },
+          "runtimes/win-x64/native/locales/sk.pak": {
+            "assetType": "native",
+            "rid": "win-x64"
+          },
+          "runtimes/win-x64/native/locales/sl.pak": {
+            "assetType": "native",
+            "rid": "win-x64"
+          },
+          "runtimes/win-x64/native/locales/sr.pak": {
+            "assetType": "native",
+            "rid": "win-x64"
+          },
+          "runtimes/win-x64/native/locales/sv.pak": {
+            "assetType": "native",
+            "rid": "win-x64"
+          },
+          "runtimes/win-x64/native/locales/sw.pak": {
+            "assetType": "native",
+            "rid": "win-x64"
+          },
+          "runtimes/win-x64/native/locales/ta.pak": {
+            "assetType": "native",
+            "rid": "win-x64"
+          },
+          "runtimes/win-x64/native/locales/te.pak": {
+            "assetType": "native",
+            "rid": "win-x64"
+          },
+          "runtimes/win-x64/native/locales/th.pak": {
+            "assetType": "native",
+            "rid": "win-x64"
+          },
+          "runtimes/win-x64/native/locales/tr.pak": {
+            "assetType": "native",
+            "rid": "win-x64"
+          },
+          "runtimes/win-x64/native/locales/uk.pak": {
+            "assetType": "native",
+            "rid": "win-x64"
+          },
+          "runtimes/win-x64/native/locales/vi.pak": {
+            "assetType": "native",
+            "rid": "win-x64"
+          },
+          "runtimes/win-x64/native/locales/zh-CN.pak": {
+            "assetType": "native",
+            "rid": "win-x64"
+          },
+          "runtimes/win-x64/native/locales/zh-TW.pak": {
+            "assetType": "native",
+            "rid": "win-x64"
+          },
+          "runtimes/win-x64/native/pdfium.vanilla.dll": {
+            "assetType": "native",
+            "rid": "win-x64"
+          },
+          "runtimes/win-x64/native/resources.pak": {
+            "assetType": "native",
+            "rid": "win-x64"
+          },
+          "runtimes/win-x64/native/snapshot_blob.bin": {
+            "assetType": "native",
+            "rid": "win-x64"
+          },
+          "runtimes/win-x64/native/swiftshader/libEGL.dll": {
+            "assetType": "native",
+            "rid": "win-x64"
+          },
+          "runtimes/win-x64/native/swiftshader/libGLESv2.dll": {
+            "assetType": "native",
+            "rid": "win-x64"
+          },
+          "runtimes/win-x64/native/v8_context_snapshot.bin": {
+            "assetType": "native",
+            "rid": "win-x64"
+          },
+          "runtimes/win-x64/native/vk_swiftshader.dll": {
+            "assetType": "native",
+            "rid": "win-x64"
+          },
+          "runtimes/win-x64/native/vulkan-1.dll": {
+            "assetType": "native",
+            "rid": "win-x64"
+          },
+          "runtimes/win-x86/native/IronCefSubprocess.exe": {
+            "assetType": "native",
+            "rid": "win-x86"
+          },
+          "runtimes/win-x86/native/IronInterop.dll": {
+            "assetType": "native",
+            "rid": "win-x86"
+          },
+          "runtimes/win-x86/native/IronPdf.Native.Chrome.deployment.json": {
+            "assetType": "native",
+            "rid": "win-x86"
+          },
+          "runtimes/win-x86/native/chrome_100_percent.pak": {
+            "assetType": "native",
+            "rid": "win-x86"
+          },
+          "runtimes/win-x86/native/chrome_200_percent.pak": {
+            "assetType": "native",
+            "rid": "win-x86"
+          },
+          "runtimes/win-x86/native/chrome_elf.dll": {
+            "assetType": "native",
+            "rid": "win-x86"
+          },
+          "runtimes/win-x86/native/d3dcompiler_47.dll": {
+            "assetType": "native",
+            "rid": "win-x86"
+          },
+          "runtimes/win-x86/native/icudtl.dat": {
+            "assetType": "native",
+            "rid": "win-x86"
+          },
+          "runtimes/win-x86/native/libEGL.dll": {
+            "assetType": "native",
+            "rid": "win-x86"
+          },
+          "runtimes/win-x86/native/libGLESv2.dll": {
+            "assetType": "native",
+            "rid": "win-x86"
+          },
+          "runtimes/win-x86/native/libcef.dll": {
+            "assetType": "native",
+            "rid": "win-x86"
+          },
+          "runtimes/win-x86/native/locales/am.pak": {
+            "assetType": "native",
+            "rid": "win-x86"
+          },
+          "runtimes/win-x86/native/locales/ar.pak": {
+            "assetType": "native",
+            "rid": "win-x86"
+          },
+          "runtimes/win-x86/native/locales/bg.pak": {
+            "assetType": "native",
+            "rid": "win-x86"
+          },
+          "runtimes/win-x86/native/locales/bn.pak": {
+            "assetType": "native",
+            "rid": "win-x86"
+          },
+          "runtimes/win-x86/native/locales/ca.pak": {
+            "assetType": "native",
+            "rid": "win-x86"
+          },
+          "runtimes/win-x86/native/locales/cs.pak": {
+            "assetType": "native",
+            "rid": "win-x86"
+          },
+          "runtimes/win-x86/native/locales/da.pak": {
+            "assetType": "native",
+            "rid": "win-x86"
+          },
+          "runtimes/win-x86/native/locales/de.pak": {
+            "assetType": "native",
+            "rid": "win-x86"
+          },
+          "runtimes/win-x86/native/locales/el.pak": {
+            "assetType": "native",
+            "rid": "win-x86"
+          },
+          "runtimes/win-x86/native/locales/en-GB.pak": {
+            "assetType": "native",
+            "rid": "win-x86"
+          },
+          "runtimes/win-x86/native/locales/en-US.pak": {
+            "assetType": "native",
+            "rid": "win-x86"
+          },
+          "runtimes/win-x86/native/locales/es-419.pak": {
+            "assetType": "native",
+            "rid": "win-x86"
+          },
+          "runtimes/win-x86/native/locales/es.pak": {
+            "assetType": "native",
+            "rid": "win-x86"
+          },
+          "runtimes/win-x86/native/locales/et.pak": {
+            "assetType": "native",
+            "rid": "win-x86"
+          },
+          "runtimes/win-x86/native/locales/fa.pak": {
+            "assetType": "native",
+            "rid": "win-x86"
+          },
+          "runtimes/win-x86/native/locales/fi.pak": {
+            "assetType": "native",
+            "rid": "win-x86"
+          },
+          "runtimes/win-x86/native/locales/fil.pak": {
+            "assetType": "native",
+            "rid": "win-x86"
+          },
+          "runtimes/win-x86/native/locales/fr.pak": {
+            "assetType": "native",
+            "rid": "win-x86"
+          },
+          "runtimes/win-x86/native/locales/gu.pak": {
+            "assetType": "native",
+            "rid": "win-x86"
+          },
+          "runtimes/win-x86/native/locales/he.pak": {
+            "assetType": "native",
+            "rid": "win-x86"
+          },
+          "runtimes/win-x86/native/locales/hi.pak": {
+            "assetType": "native",
+            "rid": "win-x86"
+          },
+          "runtimes/win-x86/native/locales/hr.pak": {
+            "assetType": "native",
+            "rid": "win-x86"
+          },
+          "runtimes/win-x86/native/locales/hu.pak": {
+            "assetType": "native",
+            "rid": "win-x86"
+          },
+          "runtimes/win-x86/native/locales/id.pak": {
+            "assetType": "native",
+            "rid": "win-x86"
+          },
+          "runtimes/win-x86/native/locales/it.pak": {
+            "assetType": "native",
+            "rid": "win-x86"
+          },
+          "runtimes/win-x86/native/locales/ja.pak": {
+            "assetType": "native",
+            "rid": "win-x86"
+          },
+          "runtimes/win-x86/native/locales/kn.pak": {
+            "assetType": "native",
+            "rid": "win-x86"
+          },
+          "runtimes/win-x86/native/locales/ko.pak": {
+            "assetType": "native",
+            "rid": "win-x86"
+          },
+          "runtimes/win-x86/native/locales/lt.pak": {
+            "assetType": "native",
+            "rid": "win-x86"
+          },
+          "runtimes/win-x86/native/locales/lv.pak": {
+            "assetType": "native",
+            "rid": "win-x86"
+          },
+          "runtimes/win-x86/native/locales/ml.pak": {
+            "assetType": "native",
+            "rid": "win-x86"
+          },
+          "runtimes/win-x86/native/locales/mr.pak": {
+            "assetType": "native",
+            "rid": "win-x86"
+          },
+          "runtimes/win-x86/native/locales/ms.pak": {
+            "assetType": "native",
+            "rid": "win-x86"
+          },
+          "runtimes/win-x86/native/locales/nb.pak": {
+            "assetType": "native",
+            "rid": "win-x86"
+          },
+          "runtimes/win-x86/native/locales/nl.pak": {
+            "assetType": "native",
+            "rid": "win-x86"
+          },
+          "runtimes/win-x86/native/locales/pl.pak": {
+            "assetType": "native",
+            "rid": "win-x86"
+          },
+          "runtimes/win-x86/native/locales/pt-BR.pak": {
+            "assetType": "native",
+            "rid": "win-x86"
+          },
+          "runtimes/win-x86/native/locales/pt-PT.pak": {
+            "assetType": "native",
+            "rid": "win-x86"
+          },
+          "runtimes/win-x86/native/locales/ro.pak": {
+            "assetType": "native",
+            "rid": "win-x86"
+          },
+          "runtimes/win-x86/native/locales/ru.pak": {
+            "assetType": "native",
+            "rid": "win-x86"
+          },
+          "runtimes/win-x86/native/locales/sk.pak": {
+            "assetType": "native",
+            "rid": "win-x86"
+          },
+          "runtimes/win-x86/native/locales/sl.pak": {
+            "assetType": "native",
+            "rid": "win-x86"
+          },
+          "runtimes/win-x86/native/locales/sr.pak": {
+            "assetType": "native",
+            "rid": "win-x86"
+          },
+          "runtimes/win-x86/native/locales/sv.pak": {
+            "assetType": "native",
+            "rid": "win-x86"
+          },
+          "runtimes/win-x86/native/locales/sw.pak": {
+            "assetType": "native",
+            "rid": "win-x86"
+          },
+          "runtimes/win-x86/native/locales/ta.pak": {
+            "assetType": "native",
+            "rid": "win-x86"
+          },
+          "runtimes/win-x86/native/locales/te.pak": {
+            "assetType": "native",
+            "rid": "win-x86"
+          },
+          "runtimes/win-x86/native/locales/th.pak": {
+            "assetType": "native",
+            "rid": "win-x86"
+          },
+          "runtimes/win-x86/native/locales/tr.pak": {
+            "assetType": "native",
+            "rid": "win-x86"
+          },
+          "runtimes/win-x86/native/locales/uk.pak": {
+            "assetType": "native",
+            "rid": "win-x86"
+          },
+          "runtimes/win-x86/native/locales/vi.pak": {
+            "assetType": "native",
+            "rid": "win-x86"
+          },
+          "runtimes/win-x86/native/locales/zh-CN.pak": {
+            "assetType": "native",
+            "rid": "win-x86"
+          },
+          "runtimes/win-x86/native/locales/zh-TW.pak": {
+            "assetType": "native",
+            "rid": "win-x86"
+          },
+          "runtimes/win-x86/native/pdfium.vanilla.dll": {
+            "assetType": "native",
+            "rid": "win-x86"
+          },
+          "runtimes/win-x86/native/resources.pak": {
+            "assetType": "native",
+            "rid": "win-x86"
+          },
+          "runtimes/win-x86/native/snapshot_blob.bin": {
+            "assetType": "native",
+            "rid": "win-x86"
+          },
+          "runtimes/win-x86/native/swiftshader/libEGL.dll": {
+            "assetType": "native",
+            "rid": "win-x86"
+          },
+          "runtimes/win-x86/native/swiftshader/libGLESv2.dll": {
+            "assetType": "native",
+            "rid": "win-x86"
+          },
+          "runtimes/win-x86/native/v8_context_snapshot.bin": {
+            "assetType": "native",
+            "rid": "win-x86"
+          },
+          "runtimes/win-x86/native/vk_swiftshader.dll": {
+            "assetType": "native",
+            "rid": "win-x86"
+          },
+          "runtimes/win-x86/native/vulkan-1.dll": {
+            "assetType": "native",
+            "rid": "win-x86"
+          }
+        }
+      },
+      "IronPdf.Slim/2022.1.4599": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.Logging.Abstractions": "2.1.0",
+          "System.Drawing.Common": "5.0.2"
+        },
+        "compile": {
+          "lib/netstandard2.0/IronPdf.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/IronPdf.dll": {}
+        }
+      },
       "Microsoft.CSharp/4.7.0": {
         "type": "package",
         "compile": {
@@ -244,6 +851,15 @@
           "lib/netcoreapp3.0/Microsoft.Extensions.Primitives.dll": {}
         }
       },
+      "Microsoft.NETCore.Platforms/5.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard1.0/_._": {}
+        },
+        "runtime": {
+          "lib/netstandard1.0/_._": {}
+        }
+      },
       "Microsoft.OpenApi/1.2.3": {
         "type": "package",
         "compile": {
@@ -251,6 +867,46 @@
         },
         "runtime": {
           "lib/netstandard2.0/Microsoft.OpenApi.dll": {}
+        }
+      },
+      "Microsoft.Win32.SystemEvents/5.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.NETCore.Platforms": "5.0.0"
+        },
+        "compile": {
+          "ref/netstandard2.0/_._": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Win32.SystemEvents.dll": {}
+        },
+        "runtimeTargets": {
+          "runtimes/win/lib/netcoreapp3.0/Microsoft.Win32.SystemEvents.dll": {
+            "assetType": "runtime",
+            "rid": "win"
+          }
+        }
+      },
+      "Newtonsoft.Json/13.0.1": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/Newtonsoft.Json.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Newtonsoft.Json.dll": {}
+        }
+      },
+      "RabbitMQ.Client/6.2.2": {
+        "type": "package",
+        "dependencies": {
+          "System.Memory": "4.5.4",
+          "System.Threading.Channels": "4.7.1"
+        },
+        "compile": {
+          "lib/netstandard2.0/RabbitMQ.Client.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/RabbitMQ.Client.dll": {}
         }
       },
       "Swashbuckle.AspNetCore/5.6.3": {
@@ -334,6 +990,37 @@
           "lib/net5.0/System.Diagnostics.DiagnosticSource.dll": {}
         }
       },
+      "System.Drawing.Common/5.0.2": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Win32.SystemEvents": "5.0.0"
+        },
+        "compile": {
+          "ref/netcoreapp3.0/System.Drawing.Common.dll": {}
+        },
+        "runtime": {
+          "lib/netcoreapp3.0/System.Drawing.Common.dll": {}
+        },
+        "runtimeTargets": {
+          "runtimes/unix/lib/netcoreapp3.0/System.Drawing.Common.dll": {
+            "assetType": "runtime",
+            "rid": "unix"
+          },
+          "runtimes/win/lib/netcoreapp3.0/System.Drawing.Common.dll": {
+            "assetType": "runtime",
+            "rid": "win"
+          }
+        }
+      },
+      "System.Memory/4.5.4": {
+        "type": "package",
+        "compile": {
+          "ref/netcoreapp2.1/_._": {}
+        },
+        "runtime": {
+          "lib/netcoreapp2.1/_._": {}
+        }
+      },
       "System.Reflection.Emit/4.7.0": {
         "type": "package",
         "compile": {
@@ -341,6 +1028,15 @@
         },
         "runtime": {
           "lib/netcoreapp2.0/_._": {}
+        }
+      },
+      "System.Threading.Channels/4.7.1": {
+        "type": "package",
+        "compile": {
+          "lib/netcoreapp3.0/System.Threading.Channels.dll": {}
+        },
+        "runtime": {
+          "lib/netcoreapp3.0/System.Threading.Channels.dll": {}
         }
       }
     }
@@ -389,6 +1085,200 @@
         "lib/netstandard2.0/Humanizer.dll",
         "lib/netstandard2.0/Humanizer.xml",
         "logo.png"
+      ]
+    },
+    "IronPdf/2022.1.4599": {
+      "sha512": "3M9O9JLr2KjUXKc9TOpKWKws9AJRIuQV4G8sa09jpVokY2Ynvccb3LxXynpC458UuS5Cb1uhoYvpYWWIKFbNOw==",
+      "type": "package",
+      "path": "ironpdf/2022.1.4599",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "EULA.txt",
+        "README.txt",
+        "docs/README.md",
+        "images/iron-logo-128.png",
+        "ironpdf.2022.1.4599.nupkg.sha512",
+        "ironpdf.nuspec"
+      ]
+    },
+    "IronPdf.Native.Chrome.Windows/2022.1.4593": {
+      "sha512": "VK4Cnvsh5v80pnw/OrXBuORjKEbfPvqneFTmN7jZXo66hAO77rLuIj9Y8J1+q68mKISe0kQTh4SY2xh17gouww==",
+      "type": "package",
+      "path": "ironpdf.native.chrome.windows/2022.1.4593",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.txt",
+        "build/net452/IronPdf.Native.Chrome.Windows.targets",
+        "images/iron-logo-128.png",
+        "ironpdf.native.chrome.windows.2022.1.4593.nupkg.sha512",
+        "ironpdf.native.chrome.windows.nuspec",
+        "lib/net/_._",
+        "lib/netstandard2.0/_._",
+        "runtimes/win-x64/native/IronCefSubprocess.exe",
+        "runtimes/win-x64/native/IronInterop.dll",
+        "runtimes/win-x64/native/IronPdf.Native.Chrome.deployment.json",
+        "runtimes/win-x64/native/chrome_100_percent.pak",
+        "runtimes/win-x64/native/chrome_200_percent.pak",
+        "runtimes/win-x64/native/chrome_elf.dll",
+        "runtimes/win-x64/native/d3dcompiler_47.dll",
+        "runtimes/win-x64/native/icudtl.dat",
+        "runtimes/win-x64/native/libEGL.dll",
+        "runtimes/win-x64/native/libGLESv2.dll",
+        "runtimes/win-x64/native/libcef.dll",
+        "runtimes/win-x64/native/locales/am.pak",
+        "runtimes/win-x64/native/locales/ar.pak",
+        "runtimes/win-x64/native/locales/bg.pak",
+        "runtimes/win-x64/native/locales/bn.pak",
+        "runtimes/win-x64/native/locales/ca.pak",
+        "runtimes/win-x64/native/locales/cs.pak",
+        "runtimes/win-x64/native/locales/da.pak",
+        "runtimes/win-x64/native/locales/de.pak",
+        "runtimes/win-x64/native/locales/el.pak",
+        "runtimes/win-x64/native/locales/en-GB.pak",
+        "runtimes/win-x64/native/locales/en-US.pak",
+        "runtimes/win-x64/native/locales/es-419.pak",
+        "runtimes/win-x64/native/locales/es.pak",
+        "runtimes/win-x64/native/locales/et.pak",
+        "runtimes/win-x64/native/locales/fa.pak",
+        "runtimes/win-x64/native/locales/fi.pak",
+        "runtimes/win-x64/native/locales/fil.pak",
+        "runtimes/win-x64/native/locales/fr.pak",
+        "runtimes/win-x64/native/locales/gu.pak",
+        "runtimes/win-x64/native/locales/he.pak",
+        "runtimes/win-x64/native/locales/hi.pak",
+        "runtimes/win-x64/native/locales/hr.pak",
+        "runtimes/win-x64/native/locales/hu.pak",
+        "runtimes/win-x64/native/locales/id.pak",
+        "runtimes/win-x64/native/locales/it.pak",
+        "runtimes/win-x64/native/locales/ja.pak",
+        "runtimes/win-x64/native/locales/kn.pak",
+        "runtimes/win-x64/native/locales/ko.pak",
+        "runtimes/win-x64/native/locales/lt.pak",
+        "runtimes/win-x64/native/locales/lv.pak",
+        "runtimes/win-x64/native/locales/ml.pak",
+        "runtimes/win-x64/native/locales/mr.pak",
+        "runtimes/win-x64/native/locales/ms.pak",
+        "runtimes/win-x64/native/locales/nb.pak",
+        "runtimes/win-x64/native/locales/nl.pak",
+        "runtimes/win-x64/native/locales/pl.pak",
+        "runtimes/win-x64/native/locales/pt-BR.pak",
+        "runtimes/win-x64/native/locales/pt-PT.pak",
+        "runtimes/win-x64/native/locales/ro.pak",
+        "runtimes/win-x64/native/locales/ru.pak",
+        "runtimes/win-x64/native/locales/sk.pak",
+        "runtimes/win-x64/native/locales/sl.pak",
+        "runtimes/win-x64/native/locales/sr.pak",
+        "runtimes/win-x64/native/locales/sv.pak",
+        "runtimes/win-x64/native/locales/sw.pak",
+        "runtimes/win-x64/native/locales/ta.pak",
+        "runtimes/win-x64/native/locales/te.pak",
+        "runtimes/win-x64/native/locales/th.pak",
+        "runtimes/win-x64/native/locales/tr.pak",
+        "runtimes/win-x64/native/locales/uk.pak",
+        "runtimes/win-x64/native/locales/vi.pak",
+        "runtimes/win-x64/native/locales/zh-CN.pak",
+        "runtimes/win-x64/native/locales/zh-TW.pak",
+        "runtimes/win-x64/native/pdfium.vanilla.dll",
+        "runtimes/win-x64/native/resources.pak",
+        "runtimes/win-x64/native/snapshot_blob.bin",
+        "runtimes/win-x64/native/swiftshader/libEGL.dll",
+        "runtimes/win-x64/native/swiftshader/libGLESv2.dll",
+        "runtimes/win-x64/native/v8_context_snapshot.bin",
+        "runtimes/win-x64/native/vk_swiftshader.dll",
+        "runtimes/win-x64/native/vulkan-1.dll",
+        "runtimes/win-x86/native/IronCefSubprocess.exe",
+        "runtimes/win-x86/native/IronInterop.dll",
+        "runtimes/win-x86/native/IronPdf.Native.Chrome.deployment.json",
+        "runtimes/win-x86/native/chrome_100_percent.pak",
+        "runtimes/win-x86/native/chrome_200_percent.pak",
+        "runtimes/win-x86/native/chrome_elf.dll",
+        "runtimes/win-x86/native/d3dcompiler_47.dll",
+        "runtimes/win-x86/native/icudtl.dat",
+        "runtimes/win-x86/native/libEGL.dll",
+        "runtimes/win-x86/native/libGLESv2.dll",
+        "runtimes/win-x86/native/libcef.dll",
+        "runtimes/win-x86/native/locales/am.pak",
+        "runtimes/win-x86/native/locales/ar.pak",
+        "runtimes/win-x86/native/locales/bg.pak",
+        "runtimes/win-x86/native/locales/bn.pak",
+        "runtimes/win-x86/native/locales/ca.pak",
+        "runtimes/win-x86/native/locales/cs.pak",
+        "runtimes/win-x86/native/locales/da.pak",
+        "runtimes/win-x86/native/locales/de.pak",
+        "runtimes/win-x86/native/locales/el.pak",
+        "runtimes/win-x86/native/locales/en-GB.pak",
+        "runtimes/win-x86/native/locales/en-US.pak",
+        "runtimes/win-x86/native/locales/es-419.pak",
+        "runtimes/win-x86/native/locales/es.pak",
+        "runtimes/win-x86/native/locales/et.pak",
+        "runtimes/win-x86/native/locales/fa.pak",
+        "runtimes/win-x86/native/locales/fi.pak",
+        "runtimes/win-x86/native/locales/fil.pak",
+        "runtimes/win-x86/native/locales/fr.pak",
+        "runtimes/win-x86/native/locales/gu.pak",
+        "runtimes/win-x86/native/locales/he.pak",
+        "runtimes/win-x86/native/locales/hi.pak",
+        "runtimes/win-x86/native/locales/hr.pak",
+        "runtimes/win-x86/native/locales/hu.pak",
+        "runtimes/win-x86/native/locales/id.pak",
+        "runtimes/win-x86/native/locales/it.pak",
+        "runtimes/win-x86/native/locales/ja.pak",
+        "runtimes/win-x86/native/locales/kn.pak",
+        "runtimes/win-x86/native/locales/ko.pak",
+        "runtimes/win-x86/native/locales/lt.pak",
+        "runtimes/win-x86/native/locales/lv.pak",
+        "runtimes/win-x86/native/locales/ml.pak",
+        "runtimes/win-x86/native/locales/mr.pak",
+        "runtimes/win-x86/native/locales/ms.pak",
+        "runtimes/win-x86/native/locales/nb.pak",
+        "runtimes/win-x86/native/locales/nl.pak",
+        "runtimes/win-x86/native/locales/pl.pak",
+        "runtimes/win-x86/native/locales/pt-BR.pak",
+        "runtimes/win-x86/native/locales/pt-PT.pak",
+        "runtimes/win-x86/native/locales/ro.pak",
+        "runtimes/win-x86/native/locales/ru.pak",
+        "runtimes/win-x86/native/locales/sk.pak",
+        "runtimes/win-x86/native/locales/sl.pak",
+        "runtimes/win-x86/native/locales/sr.pak",
+        "runtimes/win-x86/native/locales/sv.pak",
+        "runtimes/win-x86/native/locales/sw.pak",
+        "runtimes/win-x86/native/locales/ta.pak",
+        "runtimes/win-x86/native/locales/te.pak",
+        "runtimes/win-x86/native/locales/th.pak",
+        "runtimes/win-x86/native/locales/tr.pak",
+        "runtimes/win-x86/native/locales/uk.pak",
+        "runtimes/win-x86/native/locales/vi.pak",
+        "runtimes/win-x86/native/locales/zh-CN.pak",
+        "runtimes/win-x86/native/locales/zh-TW.pak",
+        "runtimes/win-x86/native/pdfium.vanilla.dll",
+        "runtimes/win-x86/native/resources.pak",
+        "runtimes/win-x86/native/snapshot_blob.bin",
+        "runtimes/win-x86/native/swiftshader/libEGL.dll",
+        "runtimes/win-x86/native/swiftshader/libGLESv2.dll",
+        "runtimes/win-x86/native/v8_context_snapshot.bin",
+        "runtimes/win-x86/native/vk_swiftshader.dll",
+        "runtimes/win-x86/native/vulkan-1.dll"
+      ]
+    },
+    "IronPdf.Slim/2022.1.4599": {
+      "sha512": "hHhxY1XCB7bKlVvjcGZPr8FG3EkIjjiZYz/7gIV5kgVPLjAGFN4Ln+MjMcacCjYdSiOh8l5fNKpV/r1ogFsa8w==",
+      "type": "package",
+      "path": "ironpdf.slim/2022.1.4599",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "EULA.txt",
+        "README.txt",
+        "docs/README.md",
+        "images/iron-logo-128.png",
+        "ironpdf.slim.2022.1.4599.nupkg.sha512",
+        "ironpdf.slim.nuspec",
+        "lib/net40/IronPdf.dll",
+        "lib/net40/IronPdf.xml",
+        "lib/netstandard2.0/IronPdf.dll",
+        "lib/netstandard2.0/IronPdf.xml"
       ]
     },
     "Microsoft.CSharp/4.7.0": {
@@ -762,6 +1652,24 @@
         "version.txt"
       ]
     },
+    "Microsoft.NETCore.Platforms/5.0.0": {
+      "sha512": "VyPlqzH2wavqquTcYpkIIAQ6WdenuKoFN0BdYBbCWsclXacSOHNQn66Gt4z5NBqEYW0FAPm5rlvki9ZiCij5xQ==",
+      "type": "package",
+      "path": "microsoft.netcore.platforms/5.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/netstandard1.0/_._",
+        "microsoft.netcore.platforms.5.0.0.nupkg.sha512",
+        "microsoft.netcore.platforms.nuspec",
+        "runtime.json",
+        "useSharedDesignerContext.txt",
+        "version.txt"
+      ]
+    },
     "Microsoft.OpenApi/1.2.3": {
       "sha512": "Nug3rO+7Kl5/SBAadzSMAVgqDlfGjJZ0GenQrLywJ84XGKO0uRqkunz5Wyl0SDwcR71bAATXvSdbdzPrYRYKGw==",
       "type": "package",
@@ -777,6 +1685,80 @@
         "lib/netstandard2.0/Microsoft.OpenApi.xml",
         "microsoft.openapi.1.2.3.nupkg.sha512",
         "microsoft.openapi.nuspec"
+      ]
+    },
+    "Microsoft.Win32.SystemEvents/5.0.0": {
+      "sha512": "Bh6blKG8VAKvXiLe2L+sEsn62nc1Ij34MrNxepD2OCrS5cpCwQa9MeLyhVQPQ/R4Wlzwuy6wMK8hLb11QPDRsQ==",
+      "type": "package",
+      "path": "microsoft.win32.systemevents/5.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/net461/Microsoft.Win32.SystemEvents.dll",
+        "lib/net461/Microsoft.Win32.SystemEvents.xml",
+        "lib/netstandard2.0/Microsoft.Win32.SystemEvents.dll",
+        "lib/netstandard2.0/Microsoft.Win32.SystemEvents.xml",
+        "microsoft.win32.systemevents.5.0.0.nupkg.sha512",
+        "microsoft.win32.systemevents.nuspec",
+        "ref/net461/Microsoft.Win32.SystemEvents.dll",
+        "ref/net461/Microsoft.Win32.SystemEvents.xml",
+        "ref/netstandard2.0/Microsoft.Win32.SystemEvents.dll",
+        "ref/netstandard2.0/Microsoft.Win32.SystemEvents.xml",
+        "runtimes/win/lib/netcoreapp2.0/Microsoft.Win32.SystemEvents.dll",
+        "runtimes/win/lib/netcoreapp2.0/Microsoft.Win32.SystemEvents.xml",
+        "runtimes/win/lib/netcoreapp3.0/Microsoft.Win32.SystemEvents.dll",
+        "runtimes/win/lib/netcoreapp3.0/Microsoft.Win32.SystemEvents.xml",
+        "useSharedDesignerContext.txt",
+        "version.txt"
+      ]
+    },
+    "Newtonsoft.Json/13.0.1": {
+      "sha512": "ppPFpBcvxdsfUonNcvITKqLl3bqxWbDCZIzDWHzjpdAHRFfZe0Dw9HmA0+za13IdyrgJwpkDTDA9fHaxOrt20A==",
+      "type": "package",
+      "path": "newtonsoft.json/13.0.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.md",
+        "lib/net20/Newtonsoft.Json.dll",
+        "lib/net20/Newtonsoft.Json.xml",
+        "lib/net35/Newtonsoft.Json.dll",
+        "lib/net35/Newtonsoft.Json.xml",
+        "lib/net40/Newtonsoft.Json.dll",
+        "lib/net40/Newtonsoft.Json.xml",
+        "lib/net45/Newtonsoft.Json.dll",
+        "lib/net45/Newtonsoft.Json.xml",
+        "lib/netstandard1.0/Newtonsoft.Json.dll",
+        "lib/netstandard1.0/Newtonsoft.Json.xml",
+        "lib/netstandard1.3/Newtonsoft.Json.dll",
+        "lib/netstandard1.3/Newtonsoft.Json.xml",
+        "lib/netstandard2.0/Newtonsoft.Json.dll",
+        "lib/netstandard2.0/Newtonsoft.Json.xml",
+        "newtonsoft.json.13.0.1.nupkg.sha512",
+        "newtonsoft.json.nuspec",
+        "packageIcon.png"
+      ]
+    },
+    "RabbitMQ.Client/6.2.2": {
+      "sha512": "+tJSgE+rQXgLvOxWvOxdZ0+No1EMa86+puZuNlCb4cNryHw2PY2Xiw/y2dz/WWdeJQp74Y2UnNXPkuLiYpvn+A==",
+      "type": "package",
+      "path": "rabbitmq.client/6.2.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE",
+        "icon.png",
+        "lib/net461/RabbitMQ.Client.dll",
+        "lib/net461/RabbitMQ.Client.pdb",
+        "lib/net461/RabbitMQ.Client.xml",
+        "lib/netstandard2.0/RabbitMQ.Client.dll",
+        "lib/netstandard2.0/RabbitMQ.Client.pdb",
+        "lib/netstandard2.0/RabbitMQ.Client.xml",
+        "rabbitmq.client.6.2.2.nupkg.sha512",
+        "rabbitmq.client.nuspec"
       ]
     },
     "Swashbuckle.AspNetCore/5.6.3": {
@@ -986,6 +1968,71 @@
         "version.txt"
       ]
     },
+    "System.Drawing.Common/5.0.2": {
+      "sha512": "rvr/M1WPf24ljpvvrVd74+NdjRUJu1bBkspkZcnzSZnmAUQWSvanlQ0k/hVHk+cHufZbZfu7vOh/vYc0q5Uu/A==",
+      "type": "package",
+      "path": "system.drawing.common/5.0.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/MonoAndroid10/_._",
+        "lib/MonoTouch10/_._",
+        "lib/net461/System.Drawing.Common.dll",
+        "lib/netcoreapp3.0/System.Drawing.Common.dll",
+        "lib/netcoreapp3.0/System.Drawing.Common.xml",
+        "lib/netstandard2.0/System.Drawing.Common.dll",
+        "lib/xamarinios10/_._",
+        "lib/xamarinmac20/_._",
+        "lib/xamarintvos10/_._",
+        "lib/xamarinwatchos10/_._",
+        "ref/MonoAndroid10/_._",
+        "ref/MonoTouch10/_._",
+        "ref/net461/System.Drawing.Common.dll",
+        "ref/netcoreapp3.0/System.Drawing.Common.dll",
+        "ref/netcoreapp3.0/System.Drawing.Common.xml",
+        "ref/netstandard2.0/System.Drawing.Common.dll",
+        "ref/xamarinios10/_._",
+        "ref/xamarinmac20/_._",
+        "ref/xamarintvos10/_._",
+        "ref/xamarinwatchos10/_._",
+        "runtimes/unix/lib/netcoreapp2.0/System.Drawing.Common.dll",
+        "runtimes/unix/lib/netcoreapp3.0/System.Drawing.Common.dll",
+        "runtimes/unix/lib/netcoreapp3.0/System.Drawing.Common.xml",
+        "runtimes/win/lib/netcoreapp2.0/System.Drawing.Common.dll",
+        "runtimes/win/lib/netcoreapp3.0/System.Drawing.Common.dll",
+        "runtimes/win/lib/netcoreapp3.0/System.Drawing.Common.xml",
+        "system.drawing.common.5.0.2.nupkg.sha512",
+        "system.drawing.common.nuspec",
+        "useSharedDesignerContext.txt",
+        "version.txt"
+      ]
+    },
+    "System.Memory/4.5.4": {
+      "sha512": "1MbJTHS1lZ4bS4FmsJjnuGJOu88ZzTT2rLvrhW7Ygic+pC0NWA+3hgAen0HRdsocuQXCkUTdFn9yHJJhsijDXw==",
+      "type": "package",
+      "path": "system.memory/4.5.4",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/net461/System.Memory.dll",
+        "lib/net461/System.Memory.xml",
+        "lib/netcoreapp2.1/_._",
+        "lib/netstandard1.1/System.Memory.dll",
+        "lib/netstandard1.1/System.Memory.xml",
+        "lib/netstandard2.0/System.Memory.dll",
+        "lib/netstandard2.0/System.Memory.xml",
+        "ref/netcoreapp2.1/_._",
+        "system.memory.4.5.4.nupkg.sha512",
+        "system.memory.nuspec",
+        "useSharedDesignerContext.txt",
+        "version.txt"
+      ]
+    },
     "System.Reflection.Emit/4.7.0": {
       "sha512": "VR4kk8XLKebQ4MZuKuIni/7oh+QGFmZW3qORd1GvBq/8026OpW501SzT/oypwiQl4TvT8ErnReh/NzY9u+C6wQ==",
       "type": "package",
@@ -1039,14 +2086,41 @@
         "useSharedDesignerContext.txt",
         "version.txt"
       ]
+    },
+    "System.Threading.Channels/4.7.1": {
+      "sha512": "6akRtHK/wab3246t4p5v3HQrtQk8LboOt5T4dtpNgsp3zvDeM4/Gx8V12t0h+c/W9/enUrilk8n6EQqdQorZAA==",
+      "type": "package",
+      "path": "system.threading.channels/4.7.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/net461/System.Threading.Channels.dll",
+        "lib/net461/System.Threading.Channels.xml",
+        "lib/netcoreapp3.0/System.Threading.Channels.dll",
+        "lib/netcoreapp3.0/System.Threading.Channels.xml",
+        "lib/netstandard1.3/System.Threading.Channels.dll",
+        "lib/netstandard1.3/System.Threading.Channels.xml",
+        "lib/netstandard2.0/System.Threading.Channels.dll",
+        "lib/netstandard2.0/System.Threading.Channels.xml",
+        "system.threading.channels.4.7.1.nupkg.sha512",
+        "system.threading.channels.nuspec",
+        "useSharedDesignerContext.txt",
+        "version.txt"
+      ]
     }
   },
   "projectFileDependencyGroups": {
     "net5.0": [
       "AutoMapper.Extensions.Microsoft.DependencyInjection >= 8.1.1",
+      "IronPdf >= 2022.1.4599",
       "Microsoft.EntityFrameworkCore >= 5.0.0",
       "Microsoft.EntityFrameworkCore.Design >= 5.0.0",
       "Microsoft.EntityFrameworkCore.InMemory >= 5.0.0",
+      "Newtonsoft.Json >= 13.0.1",
+      "RabbitMQ.Client >= 6.2.2",
       "Swashbuckle.AspNetCore >= 5.6.3"
     ]
   },
@@ -1056,11 +2130,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\wuill\\OneDrive\\Documents\\GitHub\\REF-WEB\\QuotePDFService\\QuotePDFService.csproj",
+      "projectUniqueName": "C:\\Users\\wuill\\OneDrive\\Documents\\GitHub\\quote-pdf-service-refwebsoftware\\QuotePDFService.csproj",
       "projectName": "QuotePDFService",
-      "projectPath": "C:\\Users\\wuill\\OneDrive\\Documents\\GitHub\\REF-WEB\\QuotePDFService\\QuotePDFService.csproj",
+      "projectPath": "C:\\Users\\wuill\\OneDrive\\Documents\\GitHub\\quote-pdf-service-refwebsoftware\\QuotePDFService.csproj",
       "packagesPath": "C:\\Users\\wuill\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\wuill\\OneDrive\\Documents\\GitHub\\REF-WEB\\QuotePDFService\\obj\\",
+      "outputPath": "C:\\Users\\wuill\\OneDrive\\Documents\\GitHub\\quote-pdf-service-refwebsoftware\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\wuill\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -1091,6 +2165,10 @@
             "target": "Package",
             "version": "[8.1.1, )"
           },
+          "IronPdf": {
+            "target": "Package",
+            "version": "[2022.1.4599, )"
+          },
           "Microsoft.EntityFrameworkCore": {
             "target": "Package",
             "version": "[5.0.0, )"
@@ -1104,6 +2182,14 @@
           "Microsoft.EntityFrameworkCore.InMemory": {
             "target": "Package",
             "version": "[5.0.0, )"
+          },
+          "Newtonsoft.Json": {
+            "target": "Package",
+            "version": "[13.0.1, )"
+          },
+          "RabbitMQ.Client": {
+            "target": "Package",
+            "version": "[6.2.2, )"
           },
           "Swashbuckle.AspNetCore": {
             "target": "Package",
