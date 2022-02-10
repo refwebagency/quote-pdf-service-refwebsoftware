@@ -162,7 +162,7 @@ namespace QuotePDFService.Controllers
             soit envoyé à projectService en rabbitMQ, afin d'obtenir en réponse son Id,
             pour que je puisse le SET dans l'attribut projectId des objets Todo de la 
             liste todoTemplate*/
-        [HttpPost("start project/{id}", Name = "StartNewProjectWithHisTasks")]
+        [HttpGet("startproject/{id}", Name = "StartNewProjectWithHisTasks")]
         public async Task<ActionResult<ReadQuotePDFDTO>> StartNewProjectWithHisTasks(int id)
         {
             var quotePDFItem = _repository.GetQuotePDFById(id);

@@ -37,6 +37,10 @@ namespace QuotePDFService
             services.AddHttpClient<QuotePDFController>();
             services.AddSingleton<IMessageBusClient, MessageBusClient>();
             services.AddControllers();
+            services.AddCors(options => options.AddPolicy("ApiCorsPolicy", builder =>
+            {
+                builder.WithOrigins("http://localhost:4200").AllowAnyMethod().AllowAnyHeader();
+            }));
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "QuotePDFService", Version = "v1" });
@@ -61,6 +65,8 @@ namespace QuotePDFService
             app.UseRouting();
 
             app.UseAuthorization();
+            
+            app.UseCors("ApiCorsPolicy"); 
 
             app.UseStaticFiles();
 

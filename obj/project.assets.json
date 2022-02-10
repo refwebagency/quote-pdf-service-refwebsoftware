@@ -2125,19 +2125,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\wuill\\.nuget\\packages\\": {}
+    "C:\\Users\\nicor\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\wuill\\OneDrive\\Documents\\GitHub\\quote-pdf-service-refwebsoftware\\QuotePDFService.csproj",
+      "projectUniqueName": "C:\\Users\\nicor\\Bureau\\Stage Dreamoove - RefWeb\\Ref-Web\\quote-pdf-service-refwebsoftware\\QuotePDFService.csproj",
       "projectName": "QuotePDFService",
-      "projectPath": "C:\\Users\\wuill\\OneDrive\\Documents\\GitHub\\quote-pdf-service-refwebsoftware\\QuotePDFService.csproj",
-      "packagesPath": "C:\\Users\\wuill\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\wuill\\OneDrive\\Documents\\GitHub\\quote-pdf-service-refwebsoftware\\obj\\",
+      "projectPath": "C:\\Users\\nicor\\Bureau\\Stage Dreamoove - RefWeb\\Ref-Web\\quote-pdf-service-refwebsoftware\\QuotePDFService.csproj",
+      "packagesPath": "C:\\Users\\nicor\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\nicor\\Bureau\\Stage Dreamoove - RefWeb\\Ref-Web\\quote-pdf-service-refwebsoftware\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\wuill\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\nicor\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net5.0"
